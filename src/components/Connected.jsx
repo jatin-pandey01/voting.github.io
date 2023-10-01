@@ -1,20 +1,20 @@
 import React from 'react'
 
-const Connected = (props) => {
+const Connected = ({account,candidates,remainingTime,number,handleNumberChange, voteFunction, showButton}) => {
+    // provider
   return (
     <div className="connected-container">
     <h1 className="connected-header">You are connected to Metamask </h1>
-    <p className="connected-account">Metamask Account:{props.account}</p>
-    <p className="connected-account">Remaining Time:{props.remainingTime}</p>
+    <p className="connected-account">Metamask Account:{account}</p>
+    <p className="connected-account">Remaining Time:{remainingTime}</p>
 
-    { props.showButton ? (
+    { showButton ? (
                 <p className="connected-account">You have already voted</p>
             ) : (
                 <div>
-                    <input type="number" placeholder="Entern Candidate Index" value={props.number} onChange={props.handleNumberChange}></input>
+                    <input type="number" min={0} max={4} placeholder="Entern Candidate Index" value={number} onChange={handleNumberChange}></input>
             <br />
-            <button className="login-button" onClick={props.voteFunction}>Vote</button>
-
+            <button className="login-button" onClick={voteFunction}>Vote</button>
                 </div>
             )}
     <table id="myTable" className="candidates-table">
@@ -26,7 +26,7 @@ const Connected = (props) => {
                 </tr>
                 </thead>
                 <tbody>
-                {props.candidates.map((candidate, index) => (
+                {candidates.map((candidate, index) => (
                     <tr key={index}>
                     <td>{candidate.index}</td>
                     <td>{candidate.name}</td>
@@ -39,4 +39,4 @@ const Connected = (props) => {
   )
 }
 
-export default Connected
+export default Connected;
