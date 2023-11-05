@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/voting.github.io/static/css/main.808ba034.css",
+    "main.js": "/voting.github.io/static/js/main.f857b90d.js",
+    "static/js/787.b701888c.chunk.js": "/voting.github.io/static/js/787.b701888c.chunk.js",
+    "index.html": "/voting.github.io/index.html",
+    "main.808ba034.css.map": "/voting.github.io/static/css/main.808ba034.css.map",
+    "main.f857b90d.js.map": "/voting.github.io/static/js/main.f857b90d.js.map",
+    "787.b701888c.chunk.js.map": "/voting.github.io/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.808ba034.css",
+    "static/js/main.f857b90d.js"
+  ]
+}
